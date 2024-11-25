@@ -1,0 +1,41 @@
+This archive contains the RWTH-Weather-Phoenix 2014 signer independent SI5 continuous sign language recognition corpus.
+It is released under non-commercial cc 4.0 license with attribution (see attachment)
+
+If you use this data in your research, please cite:
+
+O. Koller, J. Forster, and H. Ney. Continuous sign language recognition: Towards large vocabulary statistical recognition systems handling multiple signers. Computer Vision and Image Understanding, volume 141, pages 108-125, December 2015.
+
+(for the general corpus)
+
+and
+
+Koller, Zargaran, Ney. "Re-Sign: Re-Aligned End-to-End Sequence Modeling with Deep Recurrent CNN-HMMs" in CVPR 2017, Honululu, Hawaii, USA.
+
+(for the signer independent setup)
+
+
+The signer independent SI5 partition contains 8 signers in train and 1 signer (unseen signer, which is signer 5) in test and has been recorded on the broadcastnews channel.
+
+phoenix-2014-signerindependent-SI5
+├── annotations 
+│   │
+│   └── manual -> this contains the corpus files
+│
+├── evaluation -> this contains an evaluation script. make sure to have a compiled version of the NIST sclite tools in your path. call: ./evaluatePhoenix2014.sh example-hypothesis-dev.ctm dev
+│
+├── features
+│    │
+│    └── fullFrame-210x260px -> resolution of 210x260 pixels, but they are distorted due to transmission channel particularities, to undistort stretch images to 210x300
+│        ├── dev
+│        ├── test
+│        └── train
+│
+│
+└── models -> we provide caffe models to achieve the published  45.1 / 44.1 % WER on the dev/test partition of this corpus, we also provide our languagemodel
+
+
+   
+
+
+
+
